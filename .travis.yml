@@ -1,15 +1,23 @@
 os: linux
 dist: xenial
 language: cpp
-compiler: clang
+compiler: gcc
 addons:
   apt:
     sources:
+<<<<<<< HEAD
       - llvm-toolchain-trusty-9
     packages:
       - clang-9
 env:
   - MATRIX_EVAL="CC=clang-9 && CXX=clang-9"
+=======
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-8
+env:
+  - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8"
+>>>>>>> parent of 74a5abb... upd to clang
 before_install:
   - eval "${MATRIX_EVAL}"
 script:
