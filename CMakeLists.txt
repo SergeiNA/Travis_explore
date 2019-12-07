@@ -1,4 +1,4 @@
-make_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.2)
 
 project(test_CI VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
